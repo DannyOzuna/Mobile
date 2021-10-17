@@ -1,14 +1,27 @@
-import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import * as React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import photo from '../assets/photo.jpeg'
 
-const Profile = (props) => {
+function Profile() {
   return (
-    <SafeAreaView
-      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-    >
-      <Text>Profile Screen</Text>
-    </SafeAreaView>
+    <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'center' }}>
+      <Image source={photo} style={{
+          width: 300,
+          height: 300,
+          borderRadius: 15,
+          marginTop: 25
+      }}></Image>
+      <Text style={{
+          fontSize: 20,
+          fontWeight: 'bold',
+          color: 'black',
+          marginTop: 20
+      }}>
+          Danny Ozuna Vasquez
+      </Text>
+    </View>
   );
-};
+}
 
-export default Profile;
+
+export {Profile};
